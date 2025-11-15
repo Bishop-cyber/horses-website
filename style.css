@@ -203,3 +203,31 @@ footer {
     font-size: 14px;
     color: #555;
 }
+/* Бургер-кнопка */
+.nav-toggle {
+  display: none; /* по умолчанию скрыта */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Скрываем меню на маленьких экранах */
+@media (max-width: 600px) {
+  nav {
+    display: none; /* прячем навигацию */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav.show {
+    display: flex; /* показываем, когда добавлен класс show */
+  }
+
+  .nav-toggle {
+    display: block; /* показываем кнопку */
+  }
+}

@@ -11,6 +11,7 @@
     <!-- HEADER -->
     <header>
         <h1>The World of Horses</h1>
+        <button class="nav-toggle">&#9776;</button> <!-- это иконка ☰ -->
         <nav>
             <a href="#hero">Main</a>
             <a href="#breeds">Breeds</a>
@@ -19,7 +20,6 @@
             <a href="#contacts">Contacts</a>
         </nav>
     </header>
-
     <main>
 
         <!-- HERO -->
@@ -139,6 +139,13 @@
 
         setInterval(changeSlide, 2000);
     </script>
+    <script>
+const toggleButton = document.querySelector('.nav-toggle');
+const nav = document.querySelector('nav');
 
+toggleButton.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+</script>
 </body>
 </html>
